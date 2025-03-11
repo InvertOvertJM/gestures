@@ -44,9 +44,13 @@ gestureBox.addEventListener("touchend", function(event) {
         if (diffY > 0) {
             gestureBox.style.backgroundColor = "lightgreen";
             output.textContent = "You swiped down!"; // Modify this action
-        } else {
+        } else if(diffY < 0){
             gestureBox.style.backgroundColor = "white";
             output.textContent = "You swiped up!"; // Modify this action
+        }
+        else{
+            gestureBox.style.backgroundColor = "lightblue";
+            output.textContent = "You tapped!!!!!";
         }
     }
 });
